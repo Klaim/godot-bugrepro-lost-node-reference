@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgo1027q80bt6"]
+
+[ext_resource type="Script" path="res://thing.gd" id="1_oc2gv"]
+[ext_resource type="Script" path="res://macguffin.gd" id="2_68psq"]
+[ext_resource type="Script" path="res://slot.gd" id="3_0rl13"]
+
+[sub_resource type="Resource" id="Resource_fqahc"]
+script = ExtResource("3_0rl13")
+thing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5927, 0, -5.04631),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":ExtResource("1_oc2gv"))
+
+
+[node name="Node3D" type="Node3D"]
+
+[node name="thing" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5927, 0, -5.04631)
+script = ExtResource("1_oc2gv")
+
+[node name="macguffin" type="Node3D" parent="."]
+script = ExtResource("2_68psq")
+slot = SubResource("Resource_fqahc")
